@@ -55,6 +55,21 @@ const createWindowCreator = () => {
     createWindow.on("closed", ()=> (createWindow = null));
 };
 
+const aboutWindowCreator = () => {
+    aboutWindow = new BrowserWindow({
+        webPreferences: {
+            nodeIntegration: true
+        },
+        width: 600,
+        height: 400,
+        title: "My Profile"
+    })
+
+    aboutWindow.setMenu(null);
+    aboutWindow.loadURL(`file://${__dirname}/about.html`)
+    aboutWindow.on("closed", ()=> (aboutWindow = null));
+};
+
 ipcMain.on("appointment:create", (event, appointment) => {
     console.log(appointment);
 });
@@ -91,5 +106,17 @@ const menuTemplate=[
 {
     label: "View",
     submenu: [{role: "reload"}, {role: "toogledevtools"}]
+},
+
+{
+    label: "About",
+    submenu: [{
+        label: "My Profile",
+
+        click(){
+            aboutWindowCreator()
+        }
+    }]
+
 }
 ]
