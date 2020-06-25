@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Temperature Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	 <!-- Bootstrap core CSS -->
+  	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  	<link href="css/clean-blog.min.css" rel="stylesheet">
+  </head>
+
+ <body style="text-align:center;">
+  <header class="masthead" style="background-image: url('img/suhu.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Temperature Converter</h1>
+            <span class="subheading">
+            Celcius, Reamur, Fahrenheit
+            </span>
+            <p class="subheading">By Esa Gautama</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <h2 style="text-align: center; color: #1bf283;">Rumus</h2><br>
+  <figure class="figure">
+	  <img src="img/rumus.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+	  <figcaption class="figure-caption">Source: https://rumusrumus.com/rumus-c-r-f-k/#1_Termometer_Celsius</figcaption>
+  </figure>
+  <h2 style="text-align: center; color: #1bf283;">Program</h2><br>
+    <div class="container" style="margin-left: 25%">
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="usr">Celcius:</label>
+        <input type="text" class="form-control" id="celcius" onkeyup="celciusToFahrenheit()" style="text-align: center;font-size: 15px;">
+      </div>
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="pwd">Fahrenheit:</label>
+        <input type="text" class="form-control" id="fahrenheit" onkeyup="fahrenheitToCelcius()"style="text-align: center;font-size: 15px;">
+      </div><br><br><br><br>
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="usr">Celcius:</label>
+        <input type="text" class="form-control" id="cecius" onkeyup="celciusToKelvin()" style="text-align: center;font-size: 15px;">
+      </div>
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="pwd">Kelvin:</label>
+        <input type="text" class="form-control" id="kelvin" onkeyup="kelvinToCelcius()" style="text-align: center;font-size: 15px;">
+      </div><br><br><br><br>
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="usr">Celcius:</label>
+        <input type="text" class="form-control" id="c" onkeyup="celciusToReamur()" style="text-align: center;font-size: 15px;">
+      </div>
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="pwd">Reamur:</label>
+        <input type="text" class="form-control" id="reamur" onkeyup="reamurToCelcius()" style="text-align: center;font-size: 15px;">
+      </div>
+  </div><br>
+    <h2 style="background-color: #1bf283; text-align: center; color: white; padding: 15px; margin: 0">Selamat Mencoba </h2>
+    <script src='./renderer.js'></script>  
+  </body>
+</html>
